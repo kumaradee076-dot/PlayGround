@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101525">
+  <title>SUMMIT — a tiny climb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Summit home"><span class="brand-mark">▲</span> SUMMIT</a>
+      <div class="top-note"><span class="live-dot"></span> THE LAST LIGHT</div>
+      <button class="sound-button" id="soundButton" aria-label="Toggle sound">♫ <span> SOUND</span></button>
+    </header>
+    <section class="game-frame" aria-label="Summit platform game">
+      <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+      <div class="screen-vignette"></div>
+      <div class="hud" id="hud">
+        <div class="hud-left"><div class="room-label" id="roomLabel">01 / 05 <span>·</span> THE LOWLAND</div><div class="height-track"><i id="heightFill"></i></div></div>
+        <div class="dash-status" id="dashStatus"><span class="dash-gem"></span><span>DASH READY</span></div>
+        <div class="hud-right"><span id="shardCount">✦ 0</span><button id="pauseButton" aria-label="Pause">Ⅱ</button></div>
+      </div>
+      <div class="center-overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="eyebrow" id="eyebrow">A SMALL MOUNTAIN, A LONG WAY UP</div>
+          <h1 id="overlayTitle">SUMMIT<span>.</span></h1>
+          <p id="overlayText">The wind is loud up here. Keep moving.</p>
+          <button class="play-button" id="playButton"><span>START CLIMBING</span><b>↗</b></button>
+          <div class="control-hint"><span>← →</span> MOVE <i></i><span>SPACE</span> JUMP <i></i><span>SHIFT / X</span> DASH</div>
+        </div>
+      </div>
+      <div class="toast" id="toast"></div>
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="touch-move"><button data-key="left" aria-label="Move left">‹</button><button data-key="right" aria-label="Move right">›</button></div>
+        <div class="touch-actions"><button data-key="dash" aria-label="Dash">✦</button><button data-key="jump" aria-label="Jump">↑</button></div>
+      </div>
+      <div class="bottom-caption"><span>CLIMB HIGHER</span><span id="checkpointText">CHECKPOINT 01</span></div>
+    </section>
+    <footer class="footer"><span>FIND YOUR WAY THROUGH THE CLOUDS</span><span>WASD / ARROWS &nbsp;·&nbsp; R RESTART &nbsp;·&nbsp; ESC PAUSE</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
